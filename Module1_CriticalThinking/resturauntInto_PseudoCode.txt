@@ -1,0 +1,13 @@
+Pseudocode
+
+string resturauntName;
+string businessName;
+string city;
+string state;
+int zipCode;
+
+print(resturauntName);
+print(businessName);
+print(city + state + zipCode);
+
+end;
