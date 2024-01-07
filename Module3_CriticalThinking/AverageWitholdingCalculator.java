@@ -1,11 +1,9 @@
 import java.util.Scanner;
 
 public class AverageWitholdingCalculator {
-    private static double  CALCULATION_FAILED = -1;
-
     public static void main(String[] args) {
-        double income = CALCULATION_FAILED;
-        double taxWitheld = CALCULATION_FAILED;
+        double income = 0;
+        double taxWitheld = 0;
 	double percentage = 0;
         String incomeInput = "";
         boolean incomeAccepted = false;

@@ -18,15 +18,18 @@ _______________________________________________________________________________
 
 // Pseudo code.
 
-contant CALCULATION_FAILED = -1;
 
-doubble income = CALCULATION_FAILED;
-double taxWitheld = CALCULATION_FAILED;
+doubble income = 0;
+double taxWitheld  = 0;
+boolean inputValid = false;
 
 print Welcome to The Average Tax Witholding Calculator.
 print    enter your weekly income:
 
-income = input;
+while (inputValid)
+    income = input;
+    if (input is valid)
+         inputValid = true;
 
 if (income < $500)
     taxWitheld = 10% income
