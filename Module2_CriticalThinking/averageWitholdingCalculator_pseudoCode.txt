@@ -1,0 +1,44 @@
+_______________________________________________________________________________
+Option #1: Calculate Average Withholding
+-------------------------------------------------------------------------------
+Create a program that will calculate the weekly average tax withholding for a
+customer given the following weekly income guidelines:
+-------------------------------------------------------------------------------
+
+Income less than $500: tax rate 10%
+Incomes greater than/equal to $500 and less than $1500: tax rate 15%
+Incomes greater than/equal to $1500 and less than $2500: tax rate 20%
+Incomes greater than/equal to $2500: tax rate 30%
+
+-------------------------------------------------------------------------------
+Compile and submit your pseudocode, source code, and screenshots of the 
+application executing the application, the results and GIT repository in a
+single document.
+_______________________________________________________________________________
+
+// Pseudo code.
+
+contant CALCULATION_FAILED = -1;
+
+doubble income = CALCULATION_FAILED;
+double taxWitheld = CALCULATION_FAILED;
+
+print Welcome to The Average Tax Witholding Calculator.
+print    enter your weekly income:
+
+income = input;
+
+if (income < $500)
+    taxWitheld = 10% income
+else if (incomes >= $500 && income < $1500) 
+    taxWitheld = 15% income
+else if (incomes >= $1500 && income < $2500)
+    taxWitheld = 20% income
+else 
+    taxWitheld = 30% income
+
+print With and income of: $income
+print \n
+print Tax Witheld per week: $taxWitheld
+print Tax Witheld per month: $($taxWitheld * 4)
+
