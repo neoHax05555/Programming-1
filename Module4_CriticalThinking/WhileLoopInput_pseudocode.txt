@@ -1,0 +1,76 @@
+------------------------------------------------------------------------------------------Option #1: Looping Construct with Floating Point Numbers
+Write a program that utilizes a while-loop to read a set of five floating-point values from user input. Include code to prevent an endless loop. Ask the user to enter the values, then print the following data:
+------------------------------------------------------------------------------------------
+
+Total
+Average
+Maximum
+Minimum
+Interest on total at 20%
+------------------------------------------------------------------------------------------
+Compile and submit your pseudocode, source code, and screenshots of the application executing the application, the results and GIT repository in a single document.
+------------------------------------------------------------------------------------------
+
+
+
+float[] inputValues;
+String rawInput;
+boolean done = false;
+boolean invalid = false;
+int acceptedCount = 0;
+int invalidCount = 0;
+
+print("Please input a total of 5 numbers one by one.");
+do {
+    try {
+        print("Please input a floating point value.");
+        rawInput = userinput;
+        inputValues.add(Float.parseFloat(rawInput));
+        acceptedCount++;
+        invalidCount = 0;
+        if (5 == acceptedCount) {
+            done = true;
+        }
+    } catch (NumberFormatException e) {
+        invalidCount++;
+        if (5 == invalidCount) {
+            done = true;
+            invalid = true;
+            print("5 Invalid attempts, aborting to avoid infinite looping.");
+        } else {
+            print("Please input a valid floating point number. ex: 1.23");
+        }
+    }
+} while (!done);
+
+if (!invalid) {
+    float total = 0;
+    float average = 0;
+    float max = inputValues[0];
+    float min = inputValues[0];
+    float interest = 0;
+    int count = 0;
+
+    for (float value : inputValues) {
+        count++;
+        total += value;
+        max = (value > max) ? value : max;
+        min = (value < min) ? value : min;
+    }
+
+    //Average
+    average = total / count;
+    interest = total * INTEREST_RATE;
+
+    print();
+    print("Here are the results:");
+    print("Total:" + total);
+    print("Average:      " + average);
+    print("Maximum:      " + max);
+    print("Minimum:      " + min);
+    print("Interest 20%: " + interest);
+} else {
+    print("Please restart program and try again.");
+}
+
+
