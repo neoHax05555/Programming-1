@@ -25,7 +25,7 @@ do {
     try {
         print("Please input a floating point value.");
         rawInput = userinput;
-        inputValues.add(Float.parseFloat(rawInput));
+        inputValues.add(cast(rawInput));
         acceptedCount++;
         invalidCount = 0;
         if (5 == acceptedCount) {

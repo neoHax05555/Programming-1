@@ -1,0 +1,36 @@
+
+        ArrayList<String> weekDay = {"Monday", "Tuesday", "Wednessday",
+                "Thursday", "Friday", "Saturday", "Sunday"};
+        ArrayList<Double> tempuature = {55.0, 77.2, 65.5, 33.4, 2.0, -4.1, 25.2};
+        boolean done = false;
+        int weekdayIndex = -1;
+        String rawInput;
+
+        print("Please input a day of the week to get the average tempuature for that day, " +"\nor enter 'week' for the average tempuature this week.");
+       
+        do {
+            rawInput = input;
+            if ("week" == rawInput) {
+                weekdayIndex = 7;
+            } else {
+                for (String day : weekDay) {
+                    if (day == rawInput) {
+                        weekdayIndex = indexOfDay;
+                    }
+                }
+            }
+
+            if (-1 == weekdayIndex) {
+                print("Input was invalid. Please enter a day of the week (Monday -> Sunday) or the word \"week\".");
+            }
+        } while (-1 == weekdayIndex);
+
+        if (7 == weekdayIndex) {
+            for (String day : weekDay) {
+                print( day + temp);
+            }
+            average = weeklySum/ALL_WEEKDAY;
+            print("Weekly Average: " + average);
+        } else {
+            print(day + temp));
+        }
