@@ -35,6 +35,11 @@ public class WhileLoopInput {
 
         System.out.println("Please input a total of 5 numbers one by one.");
         do {
+            /* Validate input is a float by caching NumberFormatException when
+             * casting input to a float. If an exception is thrown then we know
+             * that the input value was invalid. We allow for a maximum of 5
+             * attempts before giving up and forcing the program to exit.
+             */
             try {
                 System.out.println("Please input a floating point value.");
                 rawInput = scanner.next();
